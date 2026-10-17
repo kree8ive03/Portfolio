@@ -551,7 +551,7 @@ ul{margin:0;padding:0;list-style:none;}
     <div class="tldr">
       <div class="tldr-row">
         <p class="tldr-key">Background</p>
-        <p class="tldr-val">Kree8Studios is a two-sided platform connecting clients with certified creative professionals across seven disciplines in Nigeria and wider Africa. Every Kree8ive is assessed, levelled and maintained to a documented standard before they can receive work.</p>
+        <p class="tldr-val">Kree8Studios is a two-sided platform connecting clients with certified creative professionals across ten disciplines in Nigeria and wider Africa. Every Kree8ive is assessed, levelled and maintained to a documented standard before they can receive work.</p>
       </div>
       <div class="tldr-row">
         <p class="tldr-key">Problem</p>
@@ -669,10 +669,11 @@ ul{margin:0;padding:0;list-style:none;}
 
   <section id="sb-ai" data-section data-title="AI layer">
     <p class="t-eyebrow" style="margin-bottom:14px">AI tooling layer</p>
-    <h3 class="t-h3">Claude as product infrastructure, not a feature</h3>
+    <h3 class="t-h3">AI as infrastructure, not a feature</h3>
     <p class="t-lede" style="margin-top:12px;margin-bottom:20px">The AI layer does three distinct jobs. None of them are chatbot-shaped.</p>
     <div class="prose">
-      <p>The Claude API sits in three places. The brief builder is a conversational four-stage flow that replaces every intake form - the client describes their need in free text, the AI identifies the discipline, asks clarifying questions, and synthesises a structured brief ready for admin review. The skill assessment generates discipline-specific questions from intake answers and scores responses across the seven dimensions to recommend a certification level.</p>
+      <p>The AI layer sits in three places. The brief builder is a conversational four-stage flow that replaces every intake form: a client describes their need in free text, the system identifies the discipline, asks clarifying questions, and synthesises a structured brief ready for admin review. The assessment generates discipline-specific questions from intake answers and scores responses across the seven dimensions to recommend a level. The third is matching, which recommends Kree8ives for a brief and gives its reasons.</p>
+      <p>No page, route or component calls a model directly. Everything runs through one internal service with a task router behind it, so the provider and the model are configuration rather than business logic. Any of them can be replaced without touching the product, the interface or the database contract, and a failure from any provider arrives as the same error. A platform whose trust model is the product cannot afford to be rebuilt every time a vendor changes.</p>
       <p>The hard part of the brief builder was the trust gap between a conversational interface and a formal output. Clients expect a form, because forms feel official, and a chat window feels casual. The fix was a stage stepper at the top - Describe, Clarify, Review, Quote - which frames the conversation as a structured process. Informal input, formal output.</p>
       <p>The assessment interface deliberately uses different vocabulary from the certification system. Public scores return as Developing, Intermediate, Advanced or Expert, never Associate, Practitioner, Senior or Master. Conflating the two would let people self-assess their way into a certification expectation.</p>
     </div>
@@ -680,6 +681,10 @@ ul{margin:0;padding:0;list-style:none;}
       <div class="info-card">
         <h4>Brief builder rather than intake form</h4>
         <p>Forms produce form-shaped answers. A conversational interface produces better briefs because the input pressure is lower. The stage stepper keeps it from feeling casual.</p>
+      </div>
+      <div class="info-card">
+        <h4>Nothing that moves money is decided by a model</h4>
+        <p>Anything touching payment, assignment, certification or a person&#39;s standing is decided by a human. The model recommends and the admin assigns. Craft and judgment in certification are scored by reviewers, with automated checks only flagging what the reviewer should look at. The AI does the reading and the drafting; it does not do the deciding.</p>
       </div>
       <div class="info-card">
         <h4>Band language rather than certification language</h4>
@@ -694,15 +699,12 @@ ul{margin:0;padding:0;list-style:none;}
     <h3 class="t-h3">What 78 pages actually covers</h3>
     <p class="t-lede" style="margin-top:12px;margin-bottom:20px">This was not a feature design project. It was an institution design project.</p>
     <div class="prose">
-      <p>The screens are a fraction of the work. Alongside the 78-page prototype, the project produced nine specification documents: two phase PRDs, the subscription and certification spec, the revision system spec, an AI resilience blueprint, an API cost analysis, the milestone and payment structure, the platform bylaws and operations policy, and the provider agreement.</p>
-      <p>The master design prompts document runs to 7,775 paragraphs. It holds a build prompt for every page, ten complete user flows, fourteen UX gap resolutions, every component spec, and a translation table between design tool and build.</p>
+      <p>The pages are a fraction of the work. Behind them sits the specification set that defines how the platform actually operates: the rules, the policies and the agreements that most platforms leave until after launch.</p>
       <p>The portal is now in build, with implementation phases committed to its own repository and the whole set in testing. The domain connects once testing clears, targeted at the first week of November 2026. Nothing is open to the public yet, so there are no certified Kree8ives and no onboarded clients to report.</p>
     </div>
-    <div class="stat-grid" data-columns="4" data-emphasis="summary" style="margin-top:20px">
+    <div class="stat-grid" data-columns="2" data-emphasis="summary" style="margin-top:20px">
       <div class="grid">
         <div class="stat-item"><p>9</p><p>Specification documents produced</p></div>
-        <div class="stat-item"><p>7,775</p><p>Paragraphs in the master build specification</p></div>
-        <div class="stat-item"><p>24</p><p>Sections in the platform bylaws</p></div>
         <div class="stat-item"><p>98</p><p>Services mapped with certification minimums</p></div>
       </div>
     </div>
