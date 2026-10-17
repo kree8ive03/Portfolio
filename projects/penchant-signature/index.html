@@ -506,11 +506,11 @@ ul{margin:0;padding:0;list-style:none;}
       <span class="chip-invert">Penchant Signature</span>
       <span class="chip">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-        5 min read
+        6 min read
       </span>
     </div>
 
-    <h1 class="t-h1">Cutting a bespoke bag order from two weeks of messages to ten minutes</h1>
+    <h1 class="t-h1">Cutting a bespoke bag order from two weeks of messages to a ten-minute checkout, now live</h1>
 
     <div class="meta-grid">
       <div>
@@ -527,11 +527,19 @@ ul{margin:0;padding:0;list-style:none;}
       </div>
       <div>
         <p class="t-meta-label">Focus</p>
-        <p class="t-meta-value">Order specification and fulfilment</p>
+        <p class="t-meta-value">Order specification, payment and fulfilment</p>
       </div>
       <div>
         <p class="t-meta-label">Timeline</p>
         <p class="t-meta-value">April to June 2026</p>
+      </div>
+      <div>
+        <p class="t-meta-label">Launched</p>
+        <p class="t-meta-value">End of September 2026</p>
+      </div>
+      <div>
+        <p class="t-meta-label">Live at</p>
+        <p class="t-meta-value"><a href="https://penchantsignature.com.ng" target="_blank" rel="noopener" style="border-bottom:1px solid var(--border-strong)">penchantsignature.com.ng</a></p>
       </div>
     </div>
   </div>
@@ -574,11 +582,11 @@ ul{margin:0;padding:0;list-style:none;}
       </div>
       <div class="tldr-row">
         <p class="tldr-key">Approach</p>
-        <p class="tldr-val">I designed and built a site that captures the full specification up front, curates it into one brief, and sends that brief to the atelier over WhatsApp. Three months, working alone across strategy, UI, frontend and backend.</p>
+        <p class="tldr-val">I designed and built a site that captures the full order specification up front and takes payment on the platform itself. Ready-to-ship pieces go straight to instant checkout. Bespoke work goes through a quote-then-pay flow that keeps a human feasibility check in place before any money changes hands. I worked alone across strategy, UI, frontend and backend, including a later phase that added the full payment system and order management.</p>
       </div>
       <div class="tldr-row">
         <p class="tldr-key">Outcome</p>
-        <p class="tldr-val">In beta testing with four testers, a complete order was specified in under ten minutes. The site is built and tested but not yet deployed, so this is a tested result rather than a live one.</p>
+        <p class="tldr-val">The site launched at penchantsignature.com.ng at the end of September 2026. On-site payment is live, and a real transaction has confirmed the full flow works end to end. A complete order can still be specified in under ten minutes, the figure from beta testing, and that specification now ends in a paid order rather than a handoff to a WhatsApp conversation.</p>
       </div>
     </div>
   </section>
@@ -605,39 +613,35 @@ ul{margin:0;padding:0;list-style:none;}
   <!-- THE APPROACH -->
   <section id="sb-approach" data-section data-title="The approach">
     <p class="t-eyebrow" style="margin-bottom:14px">The approach</p>
-    <h3 class="t-h3">Move the questions to the front</h3>
-    <p class="t-lede" style="margin-top:12px;margin-bottom:20px">Every question the atelier used to ask by message, asked once, in order, on the site.</p>
-    <div class="prose" style="margin-bottom:24px">
-      <p>The fix was not to remove WhatsApp. The atelier's customers already lived there and the relationship worked. The fix was to stop WhatsApp doing a job it is bad at - holding a long, precise, multi-part specification across days of interruption.</p>
-      <p>So the site takes the specification and WhatsApp completes the order. A client configures the piece on site, the system curates that into a single brief, and the brief lands in the atelier's thread as one message instead of forty.</p>
+    <h3 class="t-h3">Move payment onto the platform, without losing the check that mattered</h3>
+    <p class="t-lede" style="margin-top:12px;margin-bottom:20px">The first version kept checkout off the platform on purpose. What changed was not the reasoning behind that choice, only how it got handled.</p>
+    <div class="prose">
+      <p>The earliest version of this site deliberately left payment off the platform. A made-to-order piece needs a human to confirm it can actually be made before anyone commits money to it, and WhatsApp was already where that confirmation happened. Replacing it with checkout risked collecting a deposit before the atelier had agreed to make the thing at all.</p>
+      <p>That constraint never went away. What changed is how it is handled. Ready-to-ship pieces, items that already exist, go straight to instant checkout, because there is nothing left to confirm. Bespoke work still goes through a human review first: a client configures what they want, the atelier prices it and confirms it is makeable, and only then does a payment link go out.</p>
+      <p>The feasibility check survives intact. What disappeared is the second handoff. A confirmed, priced order no longer has to leave the site and get re-explained over WhatsApp to get paid for. WhatsApp still fires an alert when an order needs attention. It is a notification now, not the place the business happens.</p>
     </div>
-
     <div class="info-cards" data-layout="stack">
       <div class="info-card">
-        <h4>Finish the order in WhatsApp, not in checkout</h4>
-        <p>The obvious build was an on-platform checkout. I chose against it. Every existing customer relationship already ran through WhatsApp, and a made-to-order piece needs a human check before anyone cuts leather. A checkout would have replaced a working relationship with a transaction, and forced a payment commitment before the atelier had confirmed it could make the thing.</p>
+        <h4>Move payment on-platform, keep the feasibility check</h4>
+        <p>The first build deliberately kept checkout off the platform, because a bespoke piece needs the atelier's confirmation before money changes hands. Rather than removing that check to add payment, the two got separated. Ready-to-ship pieces skip straight to checkout. Bespoke work is priced and confirmed by a person first, and only a confirmed order gets a payment link. WhatsApp moved from where the order got finished to an alert that one needs attention.</p>
       </div>
       <div class="info-card">
-        <h4>Payment stays off the platform</h4>
-        <p>A made-to-order piece has no fixed price until the specification is settled, so a checkout would have to quote before the atelier could cost the work. Payment is agreed in the same thread where the brief lands, after the atelier confirms it can make the piece. The site's job ends at a complete brief.</p>
+        <h4>A deposit for bespoke, full payment for ready-to-ship</h4>
+        <p>Paying in full for a piece that has not started production is a lot to ask of a first-time customer. Bespoke orders take a deposit and then a balance, while ready-to-ship pieces, which already exist, take full payment at checkout. The payment structure follows what is actually being bought.</p>
       </div>
-      <!-- ROOM FOR MORE: the parameter set structure, price-on-request pieces,
-           abandoned configurations. One card each, same shape. -->
     </div>
   </section>
 
   <!-- WHAT I BUILT -->
   <section id="sb-build" data-section data-title="What I built">
     <p class="t-eyebrow" style="margin-bottom:14px">What I built</p>
-    <h3 class="t-h3">Seventy screens, one order path</h3>
-    <p class="t-lede" style="margin-top:12px;margin-bottom:20px">The whole product is one flow, and everything else exists to feed it.</p>
-    <div class="prose" style="margin-bottom:32px">
-      <p>A client lands on the site and selects make to order. From there they input every parameter specific to the piece they want made. The system curates those inputs into a single brief and sends it to the number registered to the platform, where the atelier runs final checks. Once those clear, production begins, and the piece ships on the 5 to 7 working day window the workshop already worked to.</p>
-      <p>The point of the design is that the specification arrives complete. The atelier still confirms before cutting, but it confirms against a finished brief rather than assembling one question at a time.</p>
-      <p>I built this independently across three months - strategy, interface, frontend and backend - at a little over seventy screens.</p>
+    <h3 class="t-h3">Seventy screens, one order path, and a full payment system behind it</h3>
+    <p class="t-lede" style="margin-top:12px;margin-bottom:20px">The configurator stayed the same. Everything after it changed.</p>
+    <div class="prose">
+      <p>A client lands on the site and selects make to order. From there they input every parameter specific to the piece they want made. For bespoke work the system curates those inputs into a single brief, the atelier reviews and prices it, and a payment link goes out once it is confirmed makeable. For ready-to-ship pieces the same configurator leads straight into checkout.</p>
+      <p>Payment runs through Paystack: instant full payment for ready-to-ship, and a deposit-then-balance structure for bespoke orders, so a client is not paying in full for something that has not started production. An order moves through a real state machine from quote through production to delivery, and both sides can see where it stands.</p>
+      <p>I built this independently across strategy, interface, frontend and backend, including the payment system added in a later phase of the project.</p>
     </div>
-
-    <!-- FEATURE BLOCKS - one per step, screen alongside -->
     <div class="features">
       <div class="feature">
         <div class="feature-text">
@@ -646,7 +650,6 @@ ul{margin:0;padding:0;list-style:none;}
         </div>
         <div class="img-frame"><img src="../../assets/img/pn-shop.webp" alt="Entry into the make to order route" draggable="false" loading="lazy" /></div>
       </div>
-
       <div class="feature">
         <div class="feature-text">
           <p>Specify every parameter</p>
@@ -654,7 +657,6 @@ ul{margin:0;padding:0;list-style:none;}
         </div>
         <div class="img-frame"><img src="../../assets/img/pn-configurator.webp" alt="The configurator, every parameter in sequence" draggable="false" loading="lazy" /></div>
       </div>
-
       <div class="feature">
         <div class="feature-text">
           <p>Review the curated brief</p>
@@ -662,13 +664,18 @@ ul{margin:0;padding:0;list-style:none;}
         </div>
         <div class="img-frame"><img src="../../assets/img/pn-brief.webp" alt="The curated brief before it sends" draggable="false" loading="lazy" /></div>
       </div>
-
       <div class="feature">
         <div class="feature-text">
-          <p>One message, not forty</p>
-          <p>The brief lands in the atelier's thread as a single message. Final checks happen against a finished document rather than a conversation.</p>
+          <p>The atelier prices and confirms</p>
+          <p>A completed brief lands in the atelier dashboard. Someone checks it can actually be made, prices it, and only then does a payment link go out. This is the step the whole system is built around.</p>
         </div>
         <div class="img-frame"><img src="../../assets/img/pn-atelier.webp" alt="The atelier dashboard, where a completed brief arrives" draggable="false" loading="lazy" /></div>
+      </div>
+      <div class="feature">
+        <div class="feature-text">
+          <p>Pay on the platform</p>
+          <p>Paystack handles it: full payment for ready-to-ship pieces, deposit then balance for bespoke. An order moves through a real state machine from quote to delivery, visible to the atelier through the dashboard and to the client through a lightweight account opened with a magic link, no password required.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -676,43 +683,34 @@ ul{margin:0;padding:0;list-style:none;}
   <!-- TESTING -->
   <section id="sb-testing" data-section data-title="Testing">
     <p class="t-eyebrow" style="margin-bottom:14px">Testing</p>
-    <h3 class="t-h3">Placed an order, followed it to the door</h3>
-    <p class="t-lede" style="margin-top:12px;margin-bottom:20px">I ran the whole process, not just the screens.</p>
-    <div class="prose" style="margin-bottom:24px">
-      <p>I tested end to end with four beta testers including myself, following an order from placement through production to delivery rather than stopping at submission.</p>
-      <p>The break was in the WhatsApp API handoff - the point where the site passes a completed brief into the thread the atelier actually works from. Given that handoff is the whole premise of the flow, a failure there is not a bug at the edge. It is the product not working. I rebuilt the integration until it held.</p>
+    <h3 class="t-h3">Tested in the sandbox, then confirmed for real</h3>
+    <p class="t-lede" style="margin-top:12px;margin-bottom:20px">I did not stop at a successful test payment. I wanted to see a real one clear.</p>
+    <div class="prose">
+      <p>I tested the order and payment flow end to end in Paystack&#39;s sandbox before anything touched real money: successful payments, failed ones, a tampered confirmation page that correctly failed to mark an order as paid, and duplicate webhook events that correctly did not double-process.</p>
+      <p>Earlier beta testing with four testers covered the order specification itself, following an order from placement through production to delivery rather than stopping at submission.</p>
+      <p>Before launch I ran one small real transaction through the live site to confirm the entire path works outside the sandbox: checkout, Paystack, the webhook, the order updating correctly. It cleared.</p>
     </div>
-
-    <div class="img-frame"><img src="../../assets/img/pn-enquiries.webp" alt="The enquiry list, one brief per order" draggable="false" loading="lazy" /></div>
-
-    <!-- PULL QUOTE SLOT - a line from the atelier owner or a tester
-    <blockquote class="pull-quote">
-      <p>"..."</p>
-      <cite>Name, Penchant Signature</cite>
-    </blockquote>
-    -->
+    <div class="img-frame" style="margin-top:24px"><img src="../../assets/img/pn-enquiries.webp" alt="The enquiry list, one brief per order" draggable="false" loading="lazy" /></div>
   </section>
 
   <!-- WHERE IT STANDS -->
   <section id="sb-status" data-section data-title="Where it stands">
     <p class="t-eyebrow" style="margin-bottom:14px">Where it stands</p>
-    <h3 class="t-h3">Built, tested, waiting on launch</h3>
-    <p class="t-lede" style="margin-top:12px;margin-bottom:20px">Design and build are done. Documentation is the last thing between this and deploy.</p>
+    <h3 class="t-h3">Live</h3>
+    <p class="t-lede" style="margin-top:12px;margin-bottom:20px">The site is up, payment works, and the catalogue is real.</p>
     <div class="prose">
-      <p>The site is complete and has been tested end to end. What remains is final documentation before handover and launch.</p>
-      <p>The ten minute figure comes from four testers, not from live orders, and it stays labelled that way until real customers run through it. Once it deploys, the numbers worth watching are how many briefs clear final checks without a follow-up question, and whether the two week specification window actually closes in practice.</p>
+      <p>Penchant Signature is live at penchantsignature.com.ng. Real product pricing, descriptions and the legal pages are in place, and on-site payment has been confirmed working end to end with a real transaction.</p>
+      <p>What this case study does not yet claim is customer order volume. No figures on orders placed by actual customers exist to report, so the ten-minute specification time stays attributed to beta testing rather than restated as a live result. That is the number worth watching next.</p>
     </div>
-
     <div class="stat-grid" data-columns="4" data-emphasis="summary" style="margin-top:24px">
       <div class="grid">
+        <div class="stat-item"><p>Live</p><p>penchantsignature.com.ng, since end of September 2026</p></div>
+        <div class="stat-item"><p>2</p><p>Checkout paths - instant for ready-to-ship, quote-then-pay for bespoke</p></div>
         <div class="stat-item"><p>70+</p><p>Screens designed and built</p></div>
-        <div class="stat-item"><p>3 months</p><p>Strategy to build complete</p></div>
         <div class="stat-item"><p>1</p><p>Person on strategy, UI, frontend and backend</p></div>
-        <div class="stat-item"><p>4</p><p>Order routes served - retail, custom, wholesale, private label</p></div>
       </div>
     </div>
-
-    <p class="footnote">The two week baseline is a recalled figure from the atelier, not a measured one. The ten minute result was timed across four testers in beta.</p>
+    <p class="footnote">The two week baseline is a recalled figure from the atelier, not a measured one. The ten minute result was timed across four testers in beta, before launch.</p>
   </section>
 </div>
 
